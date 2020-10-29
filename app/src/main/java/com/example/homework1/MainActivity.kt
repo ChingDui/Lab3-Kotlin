@@ -7,35 +7,12 @@ import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var ed_name: EditText
-    private lateinit var tv_text: TextView
-    private lateinit var tv_name:TextView
-    private lateinit var tv_winner:TextView
-    private lateinit var tv_mmora:TextView
-    private lateinit var tv_cmora:TextView
-    private lateinit var btn_scissor: RadioButton
-    private lateinit var btn_stone:RadioButton
-    private lateinit var btn_paper:RadioButton
-    private lateinit var btn_mora: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //連結畫面元件
-        ed_name = findViewById<EditText>(R.id.ed_name)
-        tv_text = findViewById<TextView>(R.id.tv_text)
-        tv_name = findViewById<TextView>(R.id.tv_name)
-        tv_winner = findViewById<TextView>(R.id.tv_winner)
-        tv_mmora = findViewById<TextView>(R.id.tv_mmora)
-        tv_cmora = findViewById<TextView>(R.id.tv_cmora)
-        btn_scissor = findViewById<RadioButton>(R.id.btn_scissor)
-        btn_stone = findViewById<RadioButton>(R.id.btn_stone)
-        btn_paper = findViewById<RadioButton>(R.id.btn_paper)
-        btn_mora = findViewById<Button>(R.id.btn_mora)
-        //『猜拳』按鈕點擊監聽
-        //『猜拳』按鈕點擊監聽
         btn_mora.setOnClickListener(View.OnClickListener { v: View? ->
             //判斷使用者是否輸入姓名
             if (ed_name.length() < 1)
